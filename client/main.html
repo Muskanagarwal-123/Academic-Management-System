@@ -1,0 +1,62 @@
+<head>
+  <title>Sistema Acadêmico</title>
+  <meta name="theme-color" content="#3f51b5">
+  <meta name="msapplication-navbutton-color" content="#3f51b5">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#3f51b5">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<template name="home">
+  {{> searchbox}}
+  {{#if showStudents}}
+    {{> studentsSearchs}}
+    {{#if abrir}}
+      {{> sugestao}}
+    {{/if}}
+  {{else}}
+    {{> disciplinesSearchs}}
+  {{/if}}
+</template>
+
+<template name="estruturacurricular">
+  {{> uploadcurricularstructure}}
+  {{> tablecurricularstructure}}
+</template>
+
+<template name="historicoacademico">
+  {{> uploadacademicrecord}}
+  {{> tableacademicrecords}}
+</template>
+
+<!--<template name="testes">
+  <div class="card card50">
+    <h4>Página de testes!</h4>
+  </div>
+</template>-->
+
+<template name="settings">
+  {{> usersettings}}
+</template>
+
+<template name="login">
+  {{> formlogin}}
+</template>
+
+<template name="about">
+  {{> sobre}}
+</template>
+
+<template name="navigation">
+  <p>Nome:</p>
+  <h6 class="truncate">{{nome}}</h6>
+  <p>Curso:</p>
+  <h6 class="truncate">{{curso}}</h6>
+  <li><div class="divider"></div></li>
+  <li><a href="{{pathFor route='home'}}"><i class="material-icons">home</i>Início</a></li>
+  <li><a href="{{pathFor route='estruturacurricular'}}"><i class="material-icons">assignment</i>Estrutura Curricular</a></li>
+  <li><a href="{{pathFor route='historicoacademico'}}"><i class="material-icons">assignment_ind</i>Histórico Acadêmico</a></li>
+  <!--<li><a href="{{pathFor route='testes'}}"><i class="material-icons">bug_report</i>Página de testes</a></li>-->
+  <li><a href="{{pathFor route='settings'}}"><i class="material-icons">settings</i>Configurações</a></li>
+  <li><a href="{{pathFor route='about'}}"><i class="material-icons">info</i>Sobre</a></li>
+  <li><a href="#" class="exit"><i class="material-icons">power_settings_new</i>Logout</a></li>
+</template>
