@@ -1,3 +1,5 @@
+<html>
+
 <head>
   <title>Sistema Acadêmico</title>
   <meta name="theme-color" content="#3f51b5">
@@ -5,7 +7,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="#3f51b5">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
-
+<body>
 <template name="home">
   {{> searchbox}}
   {{#if showStudents}}
@@ -60,3 +62,5 @@
   <li><a href="{{pathFor route='about'}}"><i class="material-icons">info</i>Sobre</a></li>
   <li><a href="#" class="exit"><i class="material-icons">power_settings_new</i>Logout</a></li>
 </template>
+</body>
+</html>
